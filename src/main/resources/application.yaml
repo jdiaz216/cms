@@ -7,3 +7,8 @@ spring:
   jpa:
     show-sql: true
     generate-ddl: true
+  data:
+    mongodb:
+      database: cms
+      host: localhost
+      port: 27017

@@ -1,9 +1,10 @@
 package springfive.cms.domain.repository;
 
+import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Service;
 import springfive.cms.domain.models.Category;
 import springfive.cms.domain.models.User;
 
 @Service
-public class UserRepository extends AbstractRepository<User> {
+public interface UserRepository extends MongoRepository<User,String> {
 }
