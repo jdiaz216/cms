@@ -1,15 +1,26 @@
 package springfive.cms.domain.models;
 
 import lombok.Data;
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Data
+@Entity
+@Table(name = "system_user")
 public class User {
 
-    String id;
+    @Id
+    @GeneratedValue(generator = "system-uuid")
+    @GenericGenerator(name = "system-uuid", strategy = "uuid")
+    private String id;
 
-    String identity;
+    private String identity;
 
-    String name;
+    private String name;
 
-    Role role;
+    private Role role;
 }
